@@ -1,3 +1,6 @@
+import random
+bulls = [1,2,3,4,5,6]
+
 class Card:
     max_cards = 104
     
@@ -29,8 +32,9 @@ class Player:
 class playField:
     rows = 4
 
-
-
-
-
-
+cards = []
+for i in range(104):
+    cards.append(Card(i + 1,random.choice(bulls)))
+    
+for c in cards:
+    print(f"card {c.number} and points {c.points} ")
